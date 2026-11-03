@@ -6,7 +6,7 @@ computer_score = 0
 
 while True:
 
-    user_choice = input("Please choose rock, paper, or scissors: ").lower()
+    user_choice = input("Please choose rock, paper, or scissors:(q to quit): ").lower()
 
     if user_choice == "q":
         print("Final Score:")
@@ -50,3 +50,12 @@ while True:
     elif user_choice == "scissors" and computer_choice == "paper":
         print("You win!")
         user_score += 1
+
+if user_score > computer_score:
+    print("You are the winner!")
+
+elif user_score < computer_score:
+    print("Computer is the winner!")
+
+else:
+    print("The game is a draw!")
