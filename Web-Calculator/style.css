@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+  color: #f4f5fb;
+  background: #10131d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(112, 92, 255, .22), transparent 32%),
+    radial-gradient(circle at 85% 85%, rgba(25, 196, 177, .13), transparent 30%),
+    #10131d;
+}
+
+.calculator {
+  width: min(100%, 390px);
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 28px;
+  background: rgba(27, 31, 46, .94);
+  box-shadow: 0 25px 80px rgba(0,0,0,.42);
+}
+
+.header { margin-bottom: 22px; }
+.eyebrow { color: #9b91ff; font-size: 12px; font-weight: 600; }
+h1 { margin: 4px 0 0; font-size: 25px; font-weight: 700; }
+
+.screen {
+  min-height: 118px;
+  padding: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 19px;
+  background: #111521;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.previous {
+  min-height: 23px;
+  color: #8d94a8;
+  font-size: 14px;
+  direction: ltr;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.display {
+  width: 100%;
+  color: #fff;
+  font-size: clamp(32px, 9vw, 43px);
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  direction: ltr;
+  overflow-wrap: anywhere;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 11px;
+}
+
+.key {
+  min-height: 64px;
+  border: 0;
+  border-radius: 17px;
+  color: #f4f5fb;
+  background: #292e40;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, filter .12s ease, background .12s ease;
+}
+
+.key:hover { filter: brightness(1.18); }
+.key:active { transform: scale(.95); }
+.key.utility { color: #c0baff; background: #34334f; }
+.key.operator { color: #bdb5ff; background: #38345d; }
+.key.equals {
+  color: #10131d;
+  background: #9c91ff;
+}
+.key.zero { grid-column: span 2; }
+
+.hint {
+  margin: 17px 0 0;
+  color: #858ca0;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+@media (max-width: 420px) {
+  .calculator { padding: 19px; }
+  .key { min-height: 58px; }
+}
