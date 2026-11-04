@@ -36,7 +36,7 @@ def temperature_converter():
 def weight_converter():
 
     print("Weight Conversion selected.")
-    print('''========== WEIGHT CONVERSION ==========
+    print(''' WEIGHT CONVERSION 
 
     1. Kilogram to Gram
     2. Gram to Kilogram
@@ -74,7 +74,7 @@ def length_converter():
 
     print("Length Conversion Selected!")
 
-    print('''========== LENGTH CONVERSION ==========
+    print(''' LENGTH CONVERSION 
 
     1. Meter to Centimeter
     2. Centimeter to Meter
@@ -111,7 +111,7 @@ def length_converter():
 
 #main
 while True:
-    print('''========== UNIT CONVERTER ==========
+    print(''' UNIT CONVERTER 
 
     1. Temperature Conversion
     2. Weight Conversion
